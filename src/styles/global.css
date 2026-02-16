@@ -1,0 +1,14 @@
+body {
+  background-color: #e34c39;
+}
+
+@font-face {
+  font-family: "Protogrotesk";
+  src: url("./font/protogrotesk-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+.bliveendel {
+  color: #f4b400;
+  font-size: 26px;
+}
