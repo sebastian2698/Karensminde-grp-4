@@ -1,3 +1,30 @@
+img {
+  height: 150px;
+  width: 400px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.kunstner {
+  font-size: 2rem;
+  width: 500px;
+  background-color: #ffe3c0;
+  padding-left: 1rem;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  color: #c15327;
+}
+
+.months {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-self: center;
+  align-items: center;
 body {
   background-color: #e34c39;
 }
