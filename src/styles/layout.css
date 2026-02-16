@@ -1,0 +1,39 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu {
+  display: flex;
+  position: absolute;
+  list-style: none;
+  gap: 5rem;
+  top: 8px;
+  right: 16px;
+}
+.hero {
+  position: relative;
+  text-align: center;
+
+  height: 90vh;
+  overflow: hidden;
+}
+.introtekst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 36px;
+}
+.musikken {
+  text-align: center;
+  line-height: 1.6;
+}
+.forklaring {
+  width: 900px;
+  margin: 0 auto;
+  line-height: 1.3;
+}
