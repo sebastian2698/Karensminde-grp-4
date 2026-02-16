@@ -25,4 +25,13 @@ img {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-self: center;
   align-items: center;
+body {
+  background-color: #e34c39;
+}
+
+@font-face {
+  font-family: "Protogrotesk";
+  src: url("/font/protogrotesk-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
 }
