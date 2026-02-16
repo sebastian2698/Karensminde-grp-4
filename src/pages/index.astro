@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Program from "../components/Program.astro";
+import Galleri from "../components/Galleri.astro";
 import './src/styles/global.css';
 import './src/styles/layout.css';
 ---
@@ -34,7 +35,9 @@ import './src/styles/layout.css';
 </MainLayout>
 </Program>
 <slot />
-
+<Galleri>
+	<slot />
+</Galleri>
 
 
 	
