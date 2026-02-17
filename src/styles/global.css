@@ -9,9 +9,11 @@
 
 .logo img {
   width: 20%;
-  position: absolute;
-  top: 8px;
-  left: 16px;
+  border-bottom: white;
+}
+.logo {
+  position: relative;
+  text-align: center;
 }
 
 .kunstner {

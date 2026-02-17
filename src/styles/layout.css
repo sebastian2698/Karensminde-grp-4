@@ -1,27 +1,10 @@
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 20px;
 }
 
-.menu {
-  display: flex;
-  position: absolute;
-  list-style: none;
-  gap: 5rem;
-  top: 8px;
-  right: 16px;
-}
-.hero {
-  position: relative;
-  text-align: center;
-
-  height: 90vh;
-  overflow: hidden;
-}
 .introtekst {
   position: absolute;
+  padding-top: 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -38,6 +21,36 @@ nav {
   line-height: 1.3;
 }
 
+.datoer {
+  position: relative;
+  top: 20px;
+}
 * {
-  padding: 0;
+  max-width: 1512px;
+}
+
+.logos {
+  position: absolute;
+  top: 20px; /* afstand fra toppen */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px; /* afstand mellem logoer */
+  align-items: center;
+}
+
+.logos img {
+  height: 60px; /* justér størrelse */
+  width: auto;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
