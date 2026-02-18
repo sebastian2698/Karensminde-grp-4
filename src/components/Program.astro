@@ -5,7 +5,7 @@ import Cards from "../components/Cards.astro"
   <body>
         <main>
              
-			<h2>Program</h2>
+			<h2 class="program">Program</h2>
 
            <div class="months">
                 <h4>Januar</h4>
@@ -14,40 +14,62 @@ import Cards from "../components/Cards.astro"
             </div>
 
   
- <div class="datoer">14 Februar</div>
-            <Cards title="VICTORIA SØNDERGAARD 
-                SECRETS" 
-                img="/img/image48.webp"
-                />
-      
-           </Cards>
-         
-           <h4>22 februar</h4>
-           <Cards title="KANAAN (no) + EDENA GARDENS" 
-            img="/img/image49.webp"
-                />
-        </Cards>
-             <h4>28 februar</h4>
-        <Cards title="JAZZ CLUB LOCO: ECHO, BRAVO" 
-        img="/img/image50.webp"
-                />
-</Cards>
-        </main>
-		<slot />
-	 
-    </body>
-    
+
+
+  <Cards 
+  title="VICTORIA SØNDERGAARD SECRETS"
+  img="/img/image48.webp"
+  date="14 Februar"
+  introTitle="Victoria Søndergaard Secrets"
+  introSubtitle="Viktoria Søndergaard SECRETS – Musikalsk magi uden filter"
+  introDescription="Den prisbelønnede vibrafonist, komponist og bandleder Viktoria Søndergaard har i 2025 lanceret sit mest personlige projekt til dato: Viktoria Søndergaard SECRETS – et drømmeband sammensat af fem stærke musikere fra den danske scene; Elvira Skovsang, Øyunn, Ida Duelund og Frederik Blæsild Vuust.
+
+Viktoria skaber en legende, kollektiv og kompromisløs musikalsk verden, hvor grænser mellem genrer, stemninger og virkelighed ophæves. SECRETS er både sårbart og stærkt, underspillet og ekspressivt – en levende organisme af musikalsk fællesskab."
+/>
+
+<Cards 
+  title="KANAAN (no) + EDENA GARDENS"
+  img="/img/image49.webp"
+  date="22 Februar"
+  introTitle="Kanaan & Edena Gardens"
+  introSubtitle="Nordisk jazz med atmosfære"
+  introDescription=" Kanaan spytter musik ud i sådan et tempo, at fuzz-pedalerne nærmest aldrig når at blive slukket. De tre musikere - Eskild Myrvoll, Ingvald André Vassbø og Ask Vatn Strøm - har de seneste år pumpet musik ud i et tempo, der ville få de fleste andre til at brænde sammen. Nu står de klar med deres nye album Downpour, og det er netop den energi, de tager med sig på scenen.
+."
+  
+/>
+
+<Cards 
+  title="JAZZ CLUB LOCO: ECHO, BRAVO"
+  img="/img/image50.webp"
+  date="28 Februar"
+  introTitle="Jazz Club Loco: Echo, Bravo"
+  introSubtitle="Jazz Club Loco inviterer indenfor til en sprængfarlig blanding af punk og jazz, når Echo, Bravo indtager KLEIN til Vinterjazz 2026."
+  introDescription="Post-jazz? Free-punk? Albumaktuelle Echo, Bravo lader de rå vokalers surrealistiske poesi smelte sammen med bas, trommer, guitar og trompet i en catchy lyd af støj, ord og søde melodier.
+
+Bandets nye album ‘Glasfisk’ er et råt, skarptskåret og umiddelbart værk, der bygger videre på sporene fra debutalbummet ‘Der Tod und das Mädchen’. Med minimalismen som afsæt flettes instrumenternes små, særskilte roller sammen til ét stort lydbillede, hvor unisone melodier bygges og opløses i fri improvisation."
+/>
+
+<style>
 
 <style>
     summary{background-color:#FFE3C0 ;}
     summary{color:#C15327}
     summary{font-family: 'Jaro', sans-serif;}
 h2{text-align: center;}
+h2{font-family: 'Jaro', sans-serif;}
+h2{font-size: 56px;}
     p{background-color: #FFE3C0;}
     p{color: #C15327;}
-    p{font-family: 'Jaro', sans-serif;}
+   h3{font-family: 'Jaro', sans-serif;}
     h5{font-family: 'Jaro', sans-serif;}
     h5{color: #FFB553;}
+ h3{color: #FFB553;}
+ h6{color: #FFB553;}
+ h6{font-size: 36px;}
+ h6{font-family: 'Jaro', sans-serif;}
+ h2{margin-bottom: 10px;}
+ .introTitle{color: #FFB553;}
+ 
 
 
 

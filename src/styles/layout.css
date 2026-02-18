@@ -1,3 +1,25 @@
+@media (max-width: 768px) {
+  .months {
+    grid-template-columns: 1fr;
+  }
+
+  .kunstner,
+  .forklaring {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .introtekst {
+    position: static;
+    font-size: 22px;
+    padding: 20px;
+  }
+
+  #slides .inner {
+    height: 250px;
+  }
+}
+
 nav {
   padding: 20px;
 }
@@ -14,35 +36,56 @@ nav {
 .musikken {
   text-align: center;
   line-height: 1.6;
+  padding: 50px;
 }
 .forklaring {
   width: 900px;
   margin: 0 auto;
+  padding: 3px;
   line-height: 1.3;
 }
 
 .datoer {
-  position: relative;
-  top: 20px;
-}
-* {
-  max-width: 1512px;
+  padding-left: 275px;
 }
 
 .logos {
   position: absolute;
-  top: 20px; /* afstand fra toppen */
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 30px; /* afstand mellem logoer */
+  gap: 90px;
   align-items: center;
+  border-bottom: 3px solid #fff;
 }
 
 .logos img {
-  height: 60px; /* justér størrelse */
+  height: 80px;
   width: auto;
+  display: block;
 }
+/*  dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -53,4 +96,146 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+/* carrousel */
+
+#slider {
+  margin: 0 auto;
+  width: 800px;
+  max-width: 100%;
+  text-align: center;
+}
+#slider input[type="radio"] {
+  display: none;
+}
+#slider label {
+  cursor: pointer;
+  text-decoration: none;
+}
+#slides {
+  padding: 10px;
+  border: 3px solid #ccc;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+#slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+  margin-left: -200%;
+}
+#slide4:checked ~ #slides .inner {
+  margin-left: -300%;
+}
+#slides .inner {
+  transition: margin-left 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  width: 400%;
+  line-height: 0;
+  height: 450px;
+}
+#slides .slide {
+  width: 25%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  background-size: contain;
+}
+
+#slides .slide-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+#slides .slide_1 {
+  background: black;
+}
+#slides .slide_2 {
+  background: black;
+}
+#slides .slide_3 {
+  background: black;
+}
+#slides .slide_4 {
+  background: black;
+}
+#controls {
+  margin: -180px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+#controls label {
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 50px;
+  height: 50px;
+  opacity: 0.4;
+}
+#controls label:hover {
+  opacity: 1;
+}
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+  background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+  float: right;
+  margin: 0 -50px 0 0;
+  display: block;
+}
+#slide1:checked ~ #controls label:nth-last-child(2),
+#slide2:checked ~ #controls label:nth-last-child(3),
+#slide3:checked ~ #controls label:nth-last-child(4),
+#slide4:checked ~ #controls label:nth-last-child(1) {
+  background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+  float: left;
+  margin: 0 0 0 -50px;
+  display: block;
+}
+#bullets {
+  margin: 150px 0 0;
+  text-align: center;
+}
+#bullets label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #ccc;
+  margin: 0 10px;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+  background: #444;
+}
+@media screen and (max-width: 900px) {
+  #slide1:checked ~ #controls label:nth-child(2),
+  #slide2:checked ~ #controls label:nth-child(3),
+  #slide3:checked ~ #controls label:nth-child(4),
+  #slide4:checked ~ #controls label:nth-child(1),
+  #slide1:checked ~ #controls label:nth-last-child(2),
+  #slide2:checked ~ #controls label:nth-last-child(3),
+  #slide3:checked ~ #controls label:nth-last-child(4),
+  #slide4:checked ~ #controls label:nth-last-child(1) {
+    margin: 0;
+  }
+  #slides {
+    max-width: calc(100% - 140px);
+    margin: 0 auto;
+  }
 }
